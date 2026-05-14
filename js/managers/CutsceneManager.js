@@ -54,7 +54,7 @@ export default class CutsceneManager {
             case 'panCamera': {
                 const cam = scene.cameras.main;
                 const maxX = Math.max(0, (scene.levelData?.width || 960) - cam.width);
-                const maxY = Math.max(0, 640 - cam.height);
+                const maxY = Math.max(0, (scene.levelData?.height || 640) - cam.height);
                 const targetX = Phaser.Math.Clamp(step.x || 0, 0, maxX);
                 const targetY = Phaser.Math.Clamp(step.y || 0, 0, maxY);
                 cam.pan(targetX, targetY, step.duration || 1500, 'Sine.easeInOut');

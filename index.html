@@ -8,20 +8,23 @@
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
 </head>
 <body>
-    <div id="rotate-overlay">
-        <div class="rotate-icon">📱</div>
-        <div class="rotate-text">دوّر جوالك للعرض</div>
-    </div>
-
-    <div id="game-container" dir="ltr"></div>
-
-    <div id="controls">
-        <span>← →</span> حركة
-        <span>↑ / Space</span> قفز
-        <span>W</span> جدار
-        <span>Shift</span> داش
-        <span>R</span> إعادة
-        <span>M</span> قائمة
+    <div id="game-container" dir="ltr">
+        <div id="ui-overlay">
+            <div id="level-name" class="ui-text"></div>
+            <div id="death-count" class="ui-text"></div>
+            <div id="hint-text" class="ui-text"></div>
+            <div id="touch-controls">
+                <button id="btn-left" class="touch-btn">←</button>
+                <button id="btn-right" class="touch-btn">→</button>
+                <button id="btn-jump" class="touch-btn">JUMP</button>
+                <button id="btn-dash" class="touch-btn">DASH</button>
+            </div>
+            <button id="room-enter-btn">ENTER</button>
+            <div id="orientation-overlay">
+                <div class="icon">📱</div>
+                <div class="msg">دوّر جوالك للعرض</div>
+            </div>
+        </div>
     </div>
 
     <script type="module" src="js/main.js"></script>

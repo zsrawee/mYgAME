@@ -59,7 +59,9 @@ export default class LevelBuilder {
             door.setData('amount', 0);
         });
 
-        const goal = scene.physics.add.staticSprite(data.goalX + 20, data.goalY + 25, 'goal');
+        const goal = data.goalX != null
+            ? scene.physics.add.staticSprite(data.goalX + 20, data.goalY + 25, 'goal')
+            : null;
 
         return { groups, goal };
     }
